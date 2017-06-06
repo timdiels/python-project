@@ -1,0 +1,10 @@
+{
+    "pypi_name": "chicken_turtle_util",
+    "name": "Chicken Turtle Util",
+    "repo_url": "https://github.com/timdiels/chicken-turtle-util",
+    "description": "Python 3 utility library",
+    "author": "Tim Diels",
+    "author_email": "timdiels.m@gmail.com",
+    "keywords": "development util library utility utilities",
+    "simple_project_version": "Version of simple project structure: e.g. latest or 1.0.0. Not the version of your project."
+}

@@ -1,0 +1,5 @@
+[run]
+omit =
+    {{cookiecutter.pypi_name}}/tests/*
+    venv/*
+
