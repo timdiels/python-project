@@ -1,7 +1,8 @@
 Welcome to Python Project documentation!
 ========================================
 Python Project is a collection of Python project templates, checklists and
-documentation of their associated workflow.
+documentation of their associated workflow. Currently, the collection contains
+just one project structure.
 
 Contents:
 
@@ -9,7 +10,6 @@ Contents:
    :maxdepth: 2
 
    simple
-   pull_request/index
 
 
 Indices and tables
