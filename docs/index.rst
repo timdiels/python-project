@@ -10,6 +10,7 @@ Contents:
    :maxdepth: 2
 
    simple
+   changelog
 
 
 Indices and tables
