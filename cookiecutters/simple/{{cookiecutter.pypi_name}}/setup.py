@@ -4,7 +4,7 @@ from pathlib import Path
 import os
 
 setup_args = dict(
-    version='0.0.0.dev1',
+    version='0.0.1.dev1',
     name='{{cookiecutter.pypi_name}}',
     description='{{cookiecutter.description}}',
     long_description=Path('README.rst').read_text(),
