@@ -2,6 +2,7 @@ Developer documentation
 =======================
 Documentation for developers/contributors of {{cookiecutter.name}}.
 
-See `simple project structure documentation`__.
+The project follows a `simple project`_ structure and associated workflow. Please
+read `its documentation <simple project_>`_.
 
-__ http://{{cookiecutter.pypi_name|replace("_", "-")}}.readthedocs.io/en/{{cookiecutter.simple_project_version}}/simple.html
+.. _simple project: http://python-project.readthedocs.io/en/{{cookiecutter.simple_project_version}}/simple.html
