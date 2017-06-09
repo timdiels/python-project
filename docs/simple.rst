@@ -146,6 +146,40 @@ To _`set up your local development environment`:
    ``entry_points`` in ``setup.py``, you should reinstall (by rerunning the
    above command)
 
+Code guidelines:
+
+- Docstrings must follow
+  `NumPy style <https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#sections>`_.
+
+- Be precise when specifying expected types in docstrings, e.g. in the
+  ``Parameters`` section. E.g. consider using a type language like the one used
+  in `Chicken Turtle Utilities`__.
+
+- When using someone else's code or idea, give credit in a comment in the
+  source file, not in the documentation, unless on a separate acknowledgements
+  page.
+
+__ http://chicken-turtle-util.readthedocs.io/en/4.1.0/type_language.html
+
+Commit guidelines:
+
+- Ensure ``py.test`` passes. If not, fix or mention tests are failing in the
+  commit message (e.g. ``[failing]``, ``[broken]``).
+
+- Remove trailing whitespace, unless it is significant. E.g. you cannot remove
+  the trailing whitespace on the empty line in the string given to dedent::
+
+      dedent('''\
+          First line
+
+          Last'''
+      )
+
+  By removing trailing whitespace one cause of git merge conflicts where
+  semantically nothing has changed, is prevented. Command line git will
+  highlight trailing whitespace. Most editors/IDEs can be configured to show
+  trailing whitespace (Google ``$editor show trailing whitespace``).
+
 Release checklist
 -----------------
 To release a new version to `PyPI`_:
