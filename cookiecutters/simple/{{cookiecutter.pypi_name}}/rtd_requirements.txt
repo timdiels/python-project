@@ -1,1 +1,1 @@
-{{cookiecutter.pypi_name}}[dev]
+.[dev]
