@@ -15,8 +15,8 @@
 # You should have received a copy of the GNU Lesser General Public License
 # along with {{cookiecutter.name}}.  If not, see <http://www.gnu.org/licenses/>.
 
-from signal import signal, SIGPIPE, SIG_DFL
+from signal import signal, SIGPIPE, SIG_IGN
 
 # http://stackoverflow.com/a/30091579/1031434
-signal(SIGPIPE, SIG_DFL) # Ignore SIGPIPE
+signal(SIGPIPE, SIG_IGN) # Ignore SIGPIPE
 
