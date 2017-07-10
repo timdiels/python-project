@@ -8,3 +8,4 @@ pin the major version, e.g. ``install_requires =
 -----
 TODO to be released
 
+.. _semantic versioning: http://semver.org/spec/v2.0.0.html
