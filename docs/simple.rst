@@ -191,7 +191,8 @@ To release a new version to `PyPI`_:
    Otherwise you risk including files/changes in the package uploaded to PyPI
    that are not in the git repo.
 
-2. Ensure tests pass: ``py.test``
+2. Ensure tests pass (``py.test``) in a fresh venv which does not rely on
+   unreleased dependencies (i.e. no ``pip -e ...``).
 
 3. Update changelog in ``docs/changelog.rst`` by reviewing commit messages since
    last release.
