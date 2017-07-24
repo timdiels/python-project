@@ -1,6 +1,6 @@
 Changelog
 =========
-`Semantic versioning <semver_>`_ is used. When depending on this project,
+`Semantic versioning`_ is used. When depending on this project,
 pin the major version, e.g. ``install_requires =
 ['{{cookiecutter.pypi_name}}==1.*']``.
 
