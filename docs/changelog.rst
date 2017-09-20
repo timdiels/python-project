@@ -3,6 +3,21 @@ Changelog
 
 `Semantic versioning <semver_>`_ is used.
 
+1.2.0
+-----
+- Enhancements:
+
+  - Test with fresh venv on release
+
+- Fixes:
+
+  - Fix setup.py package_data
+  - Fix broken semver link
+  - Do ignore SIGPIPE in tests
+  - Add missing semver reference
+  - RTD installed the developed package from PyPI. Now, it installs the latest
+    on the current branch.
+
 1.1.1
 -----
 - Backwards incompatible changes: none
