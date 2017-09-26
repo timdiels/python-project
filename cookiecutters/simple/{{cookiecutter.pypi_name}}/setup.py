@@ -17,7 +17,6 @@ setup_args = dict(
     install_requires=[],
     extras_require={
         'dev': [
-            'numpydoc==0.*',
             'sphinx==1.*',
             'sphinx-rtd-theme==0.*',
             'coverage-pth==0.*',
