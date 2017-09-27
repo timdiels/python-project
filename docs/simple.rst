@@ -194,7 +194,13 @@ To release a new version to `PyPI`_:
 2. Ensure tests pass (``py.test``) in a fresh venv which does not rely on
    unreleased dependencies (i.e. no ``pip -e ...``).
 
-3. Update changelog in ``docs/changelog.rst`` by reviewing commit messages since
+3. Ensure ``docs/conf.py`` is in sync with ``setup.py``.  E.g. if you reference
+   ``pytil`` with intersphinx and have pinned it in ``setup.py`` to
+   ``pytil==5.*``, your ``intersphinx_mapping`` should contain::
+
+       'pytil': ('http://pytil.readthedocs.io/en/5.0.0/', None),
+
+4. Update changelog in ``docs/changelog.rst`` by reviewing commit messages since
    last release.
 
    The changelog is mainly intended to answer:
@@ -232,7 +238,7 @@ To release a new version to `PyPI`_:
        intended for developers. It's debatable whether this section is
        necessary, you might indeed just use the commit log.
 
-4. Set the version for the release (semantic versioning: bump major iff
+5. Set the version for the release (semantic versioning: bump major iff
    backwards incompatible change, else bump minor if enhancement/addition, else
    bump patch; refer to the changelog)
 
@@ -240,7 +246,7 @@ To release a new version to `PyPI`_:
    2. in the ``__init__.py`` of the package, e.g. for a subproject in
       ``project/subproject/__init__.py``
 
-5. Generate documentation locally and review all changed areas (git diff of
+6. Generate documentation locally and review all changed areas (git diff of
    docs since last tag)::
    
        cd docs
@@ -253,20 +259,20 @@ To release a new version to `PyPI`_:
    - Dead links? (feel free to use a tool for finding dead links instead)
    - Unfinished parts?
 
-6. Point documentation link to tagged RTD release by changing ``latest`` to
+7. Point documentation link to tagged RTD release by changing ``latest`` to
    ``$version``.
 
-7. Push tagged commit with the changes::
+8. Push tagged commit with the changes::
 
        git commit -am $version
        git push
        git tag $version
        git push origin $version
 
-8. Activate the version just released at `RTD <rtd projects_>`_, see the
+9. Activate the version just released at `RTD <rtd projects_>`_, see the
    Versions tab.
 
-9. Release to `PyPI`_::
+10. Release to `PyPI`_::
    
        python setup.py sdist bdist_wheel
        twine upload dist/*
@@ -278,7 +284,7 @@ To release a new version to `PyPI`_:
    Tip: ``~/.pypirc`` can be used to avoid retyping your password each time,
    chmod it to 0600
 
-10. Bump patch and dev version (e.g. 4.0.0 -> 4.0.1.dev1, because 4.0.0.dev <
+11. Bump patch and dev version (e.g. 4.0.0 -> 4.0.1.dev1, because 4.0.0.dev <
     4.0.0), and point documentation link back to latest RTD. Then
     ``git commit -am $dev_version && git push``.
 
