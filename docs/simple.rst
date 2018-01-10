@@ -152,14 +152,13 @@ Code guidelines:
   `NumPy style <https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#sections>`_.
 
 - Be precise when specifying expected types in docstrings, e.g. in the
-  ``Parameters`` section. E.g. consider using a type language like the one used
-  in `Chicken Turtle Utilities`__.
+  ``Parameters`` section. E.g. specify types according to PEP484 in docstrings.
+  Do not use type hints as of the time of writing Sphinx does not display these
+  properly. The typing module is especially helpful for specifying types.
 
 - When using someone else's code or idea, give credit in a comment in the
   source file, not in the documentation, unless on a separate acknowledgements
   page.
-
-__ http://chicken-turtle-util.readthedocs.io/en/4.1.0/type_language.html
 
 Commit guidelines:
 
